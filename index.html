@@ -195,6 +195,73 @@
     .testi-grid{grid-template-columns:1fr;}
     .footer-top{grid-template-columns:repeat(2,1fr);}
   }
+
+  /* ---------- SMALL MOBILE (≤480px, incl. 358px) ---------- */
+  @media(max-width:480px){
+    .wrap{padding:0 16px;}
+    .header-inner{padding:10px 16px;gap:8px;flex-wrap:nowrap;}
+    .logo{font-size:17px;gap:6px;}
+    .header-actions{gap:6px;}
+    .switcher{padding:2px;gap:1px;}
+    .switcher button{padding:5px 6px;font-size:9.5px;}
+    .theme-toggle{width:28px;height:28px;flex:0 0 auto;}
+    .theme-toggle svg{width:13px;height:13px;}
+    .link-quiet{display:none;}
+    .header-actions .btn-primary{padding:8px 12px;font-size:10px;}
+
+    .ribbon{margin:-10px -16px 0;transform:rotate(0deg);}
+    .ribbon-track{animation-duration:18s;}
+    .ribbon-track span{padding:7px 14px;font-size:10px;gap:14px;}
+
+    .hero{padding:40px 0 32px;}
+    .hero-grid{gap:28px;}
+    .eyebrow{font-size:11px;margin-bottom:14px;}
+    .hero h1{font-size:30px;margin-bottom:16px;}
+    .hero p.lead{font-size:14.5px;max-width:100%;margin-bottom:24px;}
+    .hero-cta{gap:10px;}
+    .btn{padding:11px 18px;font-size:11.5px;}
+    .btn-outline{padding:9.5px 16.5px;}
+
+    .hero-visual .frame{transform:none;}
+    .hero-visual .tag{left:0;bottom:-14px;padding:12px 14px;}
+    .hero-visual .tag b{font-size:18px;}
+    .hero-visual .scope{width:44px;height:44px;top:-10px;right:0;}
+
+    .stats{padding:32px 0;}
+    .stats-grid{gap:20px;}
+    .stats-grid .num{font-size:26px;}
+    .stats-grid .label{font-size:11.5px;}
+
+    .section{padding:52px 0;}
+    .section-head{margin-bottom:30px;}
+    .section-head h2{font-size:23px;}
+    .section-head p{font-size:14px;}
+
+    .grid-cards{grid-template-columns:repeat(2,1fr);gap:8px;}
+    .fcard .overlay{padding:10px;}
+    .fcard .overlay .role{font-size:12px;}
+    .fcard .overlay .who{font-size:9.5px;}
+    .fcard.cta-card h3{font-size:14px;}
+
+    .steps-block{margin-bottom:44px;}
+    .steps-block .kicker{flex-direction:column;align-items:flex-start;gap:4px;margin-bottom:20px;}
+    .steps-block .kicker h3{font-size:19px;}
+    .steps-grid{gap:20px;}
+
+    .testi{grid-template-columns:76px 1fr;}
+    .testi .body{padding:14px 14px;}
+    .testi p{font-size:12.5px;}
+
+    .faq-q{font-size:13.5px;padding:16px 4px;gap:10px;}
+    .faq-q .plus{flex:0 0 auto;}
+
+    .final-cta h2{font-size:26px;margin-bottom:20px;}
+
+    .footer-top{grid-template-columns:1fr;gap:28px;}
+    .footer-top .logo{margin-bottom:10px;}
+    footer{padding:40px 0 24px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+  }
 </style>
 </head>
 <body>

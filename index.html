@@ -14,12 +14,12 @@
   <div class="header-inner">
     <a href="#" class="logo"><span class="dot"></span>HUNTA</a>
     <nav class="main-nav">
-      <a data-i18n="nav.design" href="#"></a>
-      <a data-i18n="nav.dev" href="#"></a>
-      <a data-i18n="nav.texts" href="#"></a>
-      <a data-i18n="nav.seo" href="#"></a>
-      <a data-i18n="nav.smm" href="#"></a>
-      <a data-i18n="nav.media" href="#"></a>
+      <a class="nav-link" data-i18n="nav.design" href="#"></a>
+      <a class="nav-link" data-i18n="nav.dev" href="#"></a>
+      <a class="nav-link" data-i18n="nav.texts" href="#"></a>
+      <a class="nav-link" data-i18n="nav.seo" href="#"></a>
+      <a class="nav-link" data-i18n="nav.smm" href="#"></a>
+      <a class="nav-link" data-i18n="nav.media" href="#"></a>
     </nav>
     <div class="header-actions">
       <div class="switcher" id="langSwitcher">
@@ -31,8 +31,8 @@
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
       </button>
-      <a href="#" class="link-quiet" data-i18n="header.login"></a>
-      <a href="#" class="btn btn-primary" data-i18n="header.register"></a>
+      <a href="#" class="link-quiet" id="loginLink" data-i18n="header.login"></a>
+      <a href="#" class="btn btn-primary" id="registerLink" data-i18n="header.register"></a>
     </div>
   </div>
   <div class="ribbon">
@@ -50,7 +50,7 @@
       <h1 data-i18n-html="hero.h1"></h1>
       <p class="lead" data-i18n="hero.lead"></p>
       <div class="hero-cta">
-        <a href="#" class="btn btn-primary" data-i18n="hero.cta1"></a>
+        <a href="#" class="btn btn-primary js-open-register" data-i18n="hero.cta1"></a>
         <a href="#" class="btn btn-outline" data-i18n="hero.cta2"></a>
       </div>
     </div>
@@ -60,6 +60,10 @@
         <video autoplay muted loop playsinline>
           <source src="1.mp4" type="video/mp4">
         </video>
+        <div class="video-caption">
+          <h3 data-i18n="hero.videoCaption"></h3>
+          <p data-i18n="hero.videoInfo"></p>
+        </div>
       </div>
       <div class="tag"><b>2 498</b><span data-i18n="hero.tagLabel"></span></div>
     </div>
@@ -104,8 +108,8 @@
       </div>
 
       <!-- Real profile 3 -->
-      <div class="fcard profile-card" data-profile="p3" data-tg="https://t.me/vvebstyle">
-        <img src="3.png" alt="">
+      <div class="fcard profile-card" data-profile="p3" data-tg="https://t.me/idev_01">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20400%20420%27%3E%3Crect%20width%3D%27400%27%20height%3D%27420%27%20fill%3D%27%2314120F%27/%3E%3Ctext%20x%3D%27200%27%20y%3D%27255%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-size%3D%27170%27%20font-weight%3D%27700%27%20fill%3D%27%23C9962E%27%20text-anchor%3D%27middle%27%3E%D0%98%3C/text%3E%3C/svg%3E" alt="">
         <div class="overlay">
           <div class="role" data-i18n="profiles.p3.role"></div>
           <div class="who" data-i18n="profiles.p3.name"></div>
@@ -113,15 +117,29 @@
         <button class="write-btn" data-i18n="contact.write"></button>
       </div>
 
-      <!-- Placeholder cards (name only, no real profile behind them yet) -->
-      <div class="fcard"><img src="https://images.pexels.com/photos/5905445/pexels-photo-5905445.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""><div class="overlay"><div class="role" data-i18n="roles.marketer"></div><div class="who">Hunta</div></div></div>
-      <div class="fcard"><img src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""><div class="overlay"><div class="role" data-i18n="roles.editor"></div><div class="who">Hunta</div></div></div>
-      <div class="fcard"><img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""><div class="overlay"><div class="role" data-i18n="roles.smm"></div><div class="who">Hunta</div></div></div>
-      <div class="fcard"><img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""><div class="overlay"><div class="role" data-i18n="roles.mobilographer"></div><div class="who">Hunta</div></div></div>
+      <!-- Real profile 4 -->
+      <div class="fcard profile-card" data-profile="p4" data-tg="https://t.me/Boostcent">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20400%20420%27%3E%3Crect%20width%3D%27400%27%20height%3D%27420%27%20fill%3D%27%2314120F%27/%3E%3Ctext%20x%3D%27200%27%20y%3D%27255%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-size%3D%27170%27%20font-weight%3D%27700%27%20fill%3D%27%23C9962E%27%20text-anchor%3D%27middle%27%3E%D0%9C%3C/text%3E%3C/svg%3E" alt="">
+        <div class="overlay">
+          <div class="role" data-i18n="profiles.p4.role"></div>
+          <div class="who" data-i18n="profiles.p4.name"></div>
+        </div>
+        <button class="write-btn" data-i18n="contact.write"></button>
+      </div>
+
+      <!-- Real profile 5 -->
+      <div class="fcard profile-card" data-profile="p5" data-tg="https://t.me/najimovdilshodbek">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20400%20420%27%3E%3Crect%20width%3D%27400%27%20height%3D%27420%27%20fill%3D%27%2314120F%27/%3E%3Ctext%20x%3D%27200%27%20y%3D%27255%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-size%3D%27170%27%20font-weight%3D%27700%27%20fill%3D%27%23C9962E%27%20text-anchor%3D%27middle%27%3E%D0%94%3C/text%3E%3C/svg%3E" alt="">
+        <div class="overlay">
+          <div class="role" data-i18n="profiles.p5.role"></div>
+          <div class="who" data-i18n="profiles.p5.name"></div>
+        </div>
+        <button class="write-btn" data-i18n="contact.write"></button>
+      </div>
 
       <div class="fcard cta-card">
         <h3 data-i18n="community.ctaTitle"></h3>
-        <a href="#" class="btn btn-primary" data-i18n="hero.cta1"></a>
+        <a href="#" class="btn btn-primary js-open-register" data-i18n="hero.cta1"></a>
       </div>
     </div>
   </div>
@@ -182,7 +200,7 @@
 <section class="section final-cta">
   <div class="wrap">
     <h2 data-i18n="finalCta.h2"></h2>
-    <a href="#" class="btn btn-primary" data-i18n="header.register"></a>
+    <a href="#" class="btn btn-primary js-open-register" data-i18n="header.register"></a>
   </div>
 </section>
 
@@ -228,6 +246,52 @@
       <div class="modal-role" id="modalRole"></div>
       <p class="modal-bio" id="modalBio"></p>
       <a href="#" class="btn btn-primary" id="modalWriteBtn" target="_blank" data-i18n="contact.write"></a>
+    </div>
+  </div>
+</div>
+
+<!-- Auth modal: вход / регистрация через номер телефона + код из Telegram-бота -->
+<div class="auth-modal-overlay" id="authModalOverlay">
+  <div class="auth-modal">
+    <button class="modal-close" id="authModalClose" aria-label="Close">&times;</button>
+
+    <div class="auth-tabs">
+      <button class="auth-tab" data-auth-tab="login" data-i18n="auth.tabLogin"></button>
+      <button class="auth-tab" data-auth-tab="register" data-i18n="auth.tabRegister"></button>
+    </div>
+
+    <!-- Шаг 1: телефон -->
+    <div class="auth-step" data-auth-step="phone">
+      <h3 id="authPhoneTitle"></h3>
+      <p class="auth-hint" data-i18n="auth.phoneHint"></p>
+      <div class="auth-field">
+        <span class="auth-prefix">+998</span>
+        <input type="tel" id="authPhoneInput" inputmode="numeric" maxlength="9" placeholder="90 123 45 67" autocomplete="off">
+      </div>
+      <p class="auth-error" id="authPhoneError"></p>
+      <button class="btn btn-primary auth-submit" id="authSendCodeBtn" data-i18n="auth.getCode"></button>
+    </div>
+
+    <!-- Шаг 2: код из бота -->
+    <div class="auth-step" data-auth-step="code" hidden>
+      <h3 data-i18n="auth.codeTitle"></h3>
+      <p class="auth-hint">
+        <span data-i18n="auth.codeHint"></span> <b id="authPhoneDisplay"></b><br>
+        <a href="#" id="authChangePhone" data-i18n="auth.changeNumber"></a>
+      </p>
+      <div class="auth-field auth-code-field">
+        <input type="text" id="authCodeInput" inputmode="numeric" maxlength="5" placeholder="• • • • •" autocomplete="off">
+      </div>
+      <p class="auth-error" id="authCodeError"></p>
+      <button class="btn btn-primary auth-submit" id="authVerifyBtn" data-i18n="auth.verify"></button>
+      <button class="auth-resend" id="authResendBtn" data-i18n="auth.resend"></button>
+    </div>
+
+    <!-- Шаг 3: успех -->
+    <div class="auth-step" data-auth-step="success" hidden>
+      <div class="auth-success-icon">✓</div>
+      <h3 id="authSuccessTitle"></h3>
+      <p class="auth-hint" data-i18n="auth.successHint"></p>
     </div>
   </div>
 </div>

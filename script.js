@@ -211,7 +211,11 @@ function applyLang(lang){
 document.querySelectorAll('[data-lang-btn]').forEach(btn=>{
   btn.addEventListener('click', ()=>applyLang(btn.dataset.langBtn));
 });
-applyLang('ru');
+/* Важно: applyLang('ru') вызывается в самом конце файла (см. низ script.js),
+   после того как объявлены все const-переменные, включая переменные модалки
+   авторизации — иначе применение языка падает с ошибкой ещё до того, как
+   успевают навешаться остальные обработчики (модалка фрилансера, тёмная тема,
+   FAQ и т.д.), и вся страница выглядит "сломанной". */
 
 document.getElementById('themeToggle').addEventListener('click', ()=>{
   const html = document.documentElement;
@@ -496,3 +500,6 @@ function verifyAuthCode(phone, code){
     setTimeout(resolve, 600); // имитация проверки кода ботом
   });
 }
+
+/* Первичная отрисовка языка — строго в конце файла, см. пояснение выше. */
+applyLang('ru');
